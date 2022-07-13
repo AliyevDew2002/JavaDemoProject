@@ -39,7 +39,7 @@ public class DetailPage extends AppCompatActivity {
             }
         });
 
-       User user=(User) getIntent().getParcelableExtra("user");
+       User user=(User) getIntent().getSerializableExtra("user");
        Log.d(TAG,user.toString());
        text_id.setText(user.toString());
     }

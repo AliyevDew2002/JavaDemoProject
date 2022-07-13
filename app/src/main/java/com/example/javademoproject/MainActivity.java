@@ -39,7 +39,7 @@ public class MainActivity<var> extends AppCompatActivity {
                 public void onActivityResult(ActivityResult result) {
                     if(result.getResultCode()==Activity.RESULT_OK){
                         Intent data=result.getData();
-                       Member member= (Member) data.getParcelableExtra("member");
+                       Member member= (Member) data.getSerializableExtra("member");
                        Log.d(TAG,member.toString());
                        main_text.setText(member.toString());
                     }
